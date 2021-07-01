@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id="shipping_categ_form" model="ir.ui.view">
+    <field name="name">shipping.categ.form</field>
+    <field name="model">shipping.categories</field>
+    <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                <group>
+                <field name="name" string="Name"/>
+                <field name="shipper" string="Shipper"/>
+                </group>
+
+
+                <group>
+                    <field name="items">
+                        <tree editable="bottom">
+		                <field name="name" string="Item Name" />
+		                <field name="code" string="Code" />
+		                <field name="intercode" string="International Code" />
+		                <field name="description" string="Description" />
+
+                        </tree>
+                    </field>
+                </group>
+
+                </sheet>
+            </form>
+    </field>
+ </record>
+ 
+
+ <record id="shipping_categ_tree" model="ir.ui.view">
+  <field name="name">shipping.categ.tree</field>
+  <field name="model">shipping.categories</field>
+   <field name="arch" type="xml">
+        <tree>
+
+            <field name="name" string="Name"/>
+            <field name="shipper" string="Shipper"/>
+
+
+
+
+        </tree>
+   </field>
+</record>
+    <record id="categories_menu_action" model="ir.actions.act_window">
+        <field name="name">Shipping Categories</field>
+        <field name="res_model">shipping.categories</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="shipping_categ_tree"/>
+    </record>
+    <menuitem id="menu_add" name="Shipping Categories"  groups="base.group_system" action="categories_menu_action"/>
+
+
+
+
+
+
+
+
+</odoo>

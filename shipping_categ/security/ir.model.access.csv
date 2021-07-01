@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_shipping_categories_add,business.appointment,shipping_categ.model_shipping_categories,group_shipping_categories_add,1,0,1,0
+access_shipping_categories_edit,business.appointment,shipping_categ.model_shipping_categories,group_shipping_categories_edit,1,1,1,0
+access_shipping_categories_delete,business.appointment,shipping_categ.model_shipping_categories,group_shipping_categories_delete,1,1,1,1
+
+
+access_shipping_relation_add,business.appointment,shipping_categ.model_shipping_relation,group_shipping_relation_add,1,0,1,0
+access_shipping_relation_edit,business.appointment,shipping_categ.model_shipping_relation,group_shipping_relation_edit,1,1,1,0
+access_shipping_relation_delete,business.appointment,shipping_categ.model_shipping_relation,group_shipping_relation_delete,1,1,1,1
+
